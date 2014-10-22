@@ -1,12 +1,12 @@
 name: check_traffic_py
 description: "file:///README.md"
 url: "https://github.com/xxorde/check_traffic_py"
-tags: Statistic, Network, Interface, Bandwidth	
+tags: Statistic, Network, Interface, Bandwidth
 vendor: Linux
 target: Network, Operating System
 type: Plugin
 license: gplv2
-releases: 
+releases:
   - 
     name: 0.1
     description: "0.1 Release"
