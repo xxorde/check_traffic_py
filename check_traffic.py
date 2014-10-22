@@ -37,7 +37,7 @@ CRITICAL = 2;
 # use desired unit
 def calc_unit(i):
 	return (i / units[unit] / sleeptime)
-	
+
 # get device data from proc
 def get_devices(procfile):
 	devices = []
@@ -65,7 +65,7 @@ def get_devices(procfile):
 						}
 				devices.append(new_dev);
 	return devices
-	
+
 def icinga_output(data):
 	count = 0
 	perf = ''
@@ -76,7 +76,7 @@ def icinga_output(data):
 		perf += dev['if']+"-rx-"+unit+"="+str(dev['rx'])+", ";
 		perf += dev['if']+"-tx-"+unit+"="+str(dev['tx'])+", ";
 	return "TRAFFIC OK - NO LIMIT SET - " + str(count) + " interfaces checked | " + perf
-	
+
 # main
 old_devs = get_devices(procfile)
 time.sleep(sleeptime)
@@ -93,6 +93,6 @@ for new_dev in new_devs:
 						}
 			div.append(new_div)
 			break
-						
+
 print icinga_output(div)
 exit(OK)
